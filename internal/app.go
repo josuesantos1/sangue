@@ -7,11 +7,6 @@ import (
 	"net/http"
 )
 
-type Application interface {
-    Start() error
-    Shutdown(ctx context.Context) error
-}
-
 type App struct {
     Port   string
     Server *http.Server
@@ -28,6 +23,9 @@ func NewApp(port string) (*App, error) {
     mux.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
         w.Write([]byte("ok"))
     })
+
+    fs := http.FileServer(http.Dir("resources/public"))
+    mux.Handle("/", fs)
 
     srv := &http.Server{
         Addr:    ":" + port,
