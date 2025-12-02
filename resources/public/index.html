@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>sanguebom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+    html, body { font-family: "Roboto", system-ui; }
+  </style>
+</head>
+
+<body class="min-h-screen bg-white flex flex-col">
+  <main class="flex-grow flex items-center justify-center">
+    <div class="w-full max-w-2xl px-6">
+      <div class="flex justify-center mb-8">
+        <h1 class="text-6xl sm:text-7xl font-extrabold tracking-tight text-red-600 select-none">
+            SangueBom
+        </h1>
+      </div>
+
+      <div class="flex justify-center gap-4 mt-6">
+        <a href="/cadastro-doador"
+           class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg text-lg font-medium shadow-md transition-colors">
+          Quero ser doador
+        </a>
+
+        <a href="/buscar-doador"
+           class="bg-white border-2 border-red-600 hover:bg-red-50 text-red-600 px-8 py-3 rounded-lg text-lg font-medium shadow-md transition-colors">
+          Procurar doador
+        </a>
+      </div>
+
+      <div class="text-center text-sm text-gray-500 mt-12">
+        <p>Seja um doador, Salve vidas!</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
